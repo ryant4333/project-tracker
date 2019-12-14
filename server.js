@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static("dist/heroku-app2"));
+app.use(express.static("dist/protracker-app"));
 
 app.get('*', (req,res)=>{
-    res.sendFile(path.join(__dirname, '/dist/heroku-app2/index.html'));
+    res.sendFile(path.join(__dirname, '/dist/protracker-app/index.html'));
 });
 
 app.listen(process.env.PORT || 3000);
